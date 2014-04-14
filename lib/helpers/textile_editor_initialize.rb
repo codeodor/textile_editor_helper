@@ -4,10 +4,10 @@ class TextileEditorInitialize
     def textile_editor_initialize
       output = []
       output << '<script type="text/javascript">'
-      output << %{$(document).ready(function() \{}
+      output << %{jQuery(document).ready(function() \{}
       output << '/* <![CDATA[ */'
-      output << %{$.each($('textarea.textile_editor'),function(i,el){
-                    TextileEditor.initialize($(el).attr('id'));
+      output << %{jQuery.each(jQuery('textarea.textile_editor'),function(i,el){
+                    TextileEditor.initialize(jQuery(el).attr('id'));
                   });}
       output << '/* ]]> */'
       output << '});'
